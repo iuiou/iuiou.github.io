@@ -1,0 +1,411 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.1" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.1" type="image/png" sizes="32x32"><meta name="description" content="buaa training up1                            CCPC 秦皇岛 H.Holy Sequence         大致题意：定义满足以下条件的序列名称为“holy sequence”： \[ \forall i \in[1,n]\quad a_i\in\{1,2,\cdots, n\} \\ \forall">
+<meta property="og:type" content="article">
+<meta property="og:title" content="buaatrainingup1">
+<meta property="og:url" content="http://iuiou.github.io/2021/05/31/buaatraingup1/index.html">
+<meta property="og:site_name" content="iuiou&#39;s blog">
+<meta property="og:description" content="buaa training up1                            CCPC 秦皇岛 H.Holy Sequence         大致题意：定义满足以下条件的序列名称为“holy sequence”： \[ \forall i \in[1,n]\quad a_i\in\{1,2,\cdots, n\} \\ \forall">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-05-30T16:17:03.000Z">
+<meta property="article:modified_time" content="2021-06-01T16:47:30.784Z">
+<meta property="article:author" content="iuiou">
+<meta property="article:tag" content="team training">
+<meta name="twitter:card" content="summary"><title>buaatrainingup1 | iuiou's blog</title><link ref="canonical" href="http://iuiou.github.io/2021/05/31/buaatraingup1/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":false,"scrollDownIcon":true},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">buaatrainingup1</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2021-05-31</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2021-06-02</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">2k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">16分</span></span></div></header><div class="post-body">
+        <h4 id="buaa-training-up1"   >
+          <a href="#buaa-training-up1" class="heading-link"><i class="fas fa-link"></i></a>buaa training up1</h4>
+      
+
+        <h5 id="ccpc-秦皇岛-h.holy-sequence"   >
+          <a href="#ccpc-秦皇岛-h.holy-sequence" class="heading-link"><i class="fas fa-link"></i></a>CCPC 秦皇岛 H.Holy Sequence</h5>
+      
+<ul>
+<li>大致题意：定义满足以下条件的序列名称为“holy sequence”： <span class="math display">\[
+\forall i \in[1,n]\quad a_i\in\{1,2,\cdots, n\} \\
+\forall i \in[1,n]\quad p_i-p_{i-1} \le1(p_k = \max\{a_1,a_2,\cdots, a_k\},p_0 = 0)
+\]</span></li>
+</ul>
+<p>现在对于 <span class="math inline">\(t\)</span> 取 <span class="math inline">\(1，2，3, \cdots,n\)</span> 需要求出： <span class="math display">\[
+\sum _{p\in S_n}cnt(p,t)^2
+\]</span> 其中，<span class="math inline">\(cnt(p,t)\)</span> 指 <span class="math inline">\(t\)</span> 在 <span class="math inline">\(p\)</span> 序列中出现的次数，<span class="math inline">\(S_n\)</span> 指所有的 “holy sequence” 序列。</p>
+<ul>
+<li><p>题解：妙啊，注意到我们要求的是 <span class="math inline">\(cnt(p,t)\)</span> 的平方，可以换一种角度来理解 <span class="math inline">\(cnt(p,t)\)</span> 的平方，即从序列 <span class="math inline">\(p\)</span> 的所有 <span class="math inline">\(t\)</span> 中随机的选择两个且可重复的总方法数，现在只要考虑选取方法总数即可，两种选法有差别，有两种可能，序列不同，或者序列相同但选的位置不同，现在考虑每个数对于最终答案的贡献，令 <span class="math inline">\(f[i][j]\)</span> 为所有长度为 <span class="math inline">\(i\)</span> 的序列且 <span class="math inline">\(j\)</span> 仅仅出现在序列的最后的总方法数，令 <span class="math inline">\(g[i][j]\)</span>为所有长度为 <span class="math inline">\(i\)</span> 的序列且 <span class="math inline">\(j\)</span> 开头的序列总数（脱离 <span class="math inline">\(a_0\)</span> 的限制）。枚举第一次出现 <span class="math inline">\(j\)</span> 的位置为 <span class="math inline">\(i\)</span> ，那么对于所有序列一共会出</p></li>
+<li><p>现四种情况。</p>
+<ul>
+<li>两次选择都选择位置 <span class="math inline">\(i\)</span></li>
+<li>一次选择位置 <span class="math inline">\(i\)</span>，一次选择位置 <span class="math inline">\(k\)</span>（<span class="math inline">\(k \gt i\)</span>）</li>
+<li>两次都选择 <span class="math inline">\(k\)</span></li>
+<li>两次分别选 <span class="math inline">\(k_1\)</span> 和 <span class="math inline">\(k_2\)</span>。</li>
+</ul>
+<p>每一个序列前缀的情况总数都是 $ f[i][j]$，假如对于后面的串中的数 <span class="math inline">\(j\)</span> 一共要选择 <span class="math inline">\(x\)</span> 个，那么后缀的情况数（暂时不管不同位置的 <span class="math inline">\(j\)</span> ）就是 <span class="math inline">\(g[n-x-i+1][j]\)</span>，因为，假如已经固定选择一个位置的 <span class="math inline">\(j\)</span> ，那么那个位置相当于已经固定，可以去掉。换一个角度就是把 $j $ 随机挑选一个位置放置，整体贡献需要乘上 <span class="math inline">\(C_n^x\)</span> 的权值。</p>
+<p>下面看看 <span class="math inline">\(f[i][j]\)</span> 怎么求，令 <span class="math inline">\(pre[i][j]\)</span> 表示长度为 <span class="math inline">\(i\)</span> ，且满足序列中最大值为 <span class="math inline">\(j\)</span> 的序列总数，有 <span class="math inline">\(pre[i][j]= pre[i-1][j-1]+pre[i-1][j]*j\)</span> 。序列性质保证了，如果 <span class="math inline">\(j\)</span> 在序列中第一次出现，那么之前序列中的最大值一定是 <span class="math inline">\(j-1\)</span>，即有 <span class="math inline">\(f[i][j] = pre[i-1][j-1]\)</span>。那么式子可以改写为 <span class="math inline">\(f[i][j]= f[i-1][j-1]+f[i-1][j]*(j-1)\)</span></p>
+<p>下面考虑 <span class="math inline">\(g[i][j]\)</span> ，考虑第二个位置，有两种情况，如果第二个位置大于 <span class="math inline">\(j\)</span>，即为 <span class="math inline">\(j+1\)</span> ，则方案数为 <span class="math inline">\(g[i-1][j+1]\)</span>，第二个位置小于 <span class="math inline">\(j\)</span> ，此时第二个位置有 <span class="math inline">\(j\)</span> 中选法，之后第二个位置固定，之后相当于可以去掉这个位置，方案数 <span class="math inline">\(g[i-1][j]*j\)</span>，递推方程为 <span class="math inline">\(g[i][j] = g[i-1][j+1]+g[i-1][j]*j\)</span>。</p></li>
+</ul>
+
+        <h5 id="buaa-spring-training-3-c---boardroom-meeting"   >
+          <a href="#buaa-spring-training-3-c---boardroom-meeting" class="heading-link"><i class="fas fa-link"></i></a>BUAA spring training 3 C - Boardroom Meeting</h5>
+      
+<ul>
+<li><p>大致题意：给定两个序列 <span class="math inline">\(a_i\)</span>，<span class="math inline">\(b_i\)</span>，找出对于整个序列找出最长下标序列 <span class="math inline">\(i_n\)</span> 满足: <span class="math display">\[
+i_k&lt;i_{k+1} \quad a_{i_k}&lt;a_{i_{k+1}}\and b_{i_k}&lt;b_{i_{k+1}}
+\]</span></p></li>
+<li><p>题解：三维序，考虑用 cdq分治，先递归左边，再递归右边。中间进行合并时，左边已经处理完毕，可以向右边转移。将右边按照第二维度排序（左边在递归的时候已经排好序），将左右两边进行合并时维护第三维度的最大值，每次枚举到右边时通过树状数组查询最大值然后更新答案。之后递归右边。相当于用 cdq 分治优化了dp的过程。总复杂度<span class="math inline">\(O(n\log^2n)\)</span></p></li>
+</ul>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2e5</span>+<span class="number">13</span>;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line"><span class="keyword">int</span> dp[maxn];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> id,x,y;</span><br><span class="line">	<span class="keyword">bool</span> <span class="keyword">friend</span> <span class="keyword">operator</span> &lt; (node a,node b)&#123;</span><br><span class="line">		<span class="keyword">return</span> a.x==b.x?(a.y&lt;b.y):a.x&lt;b.x;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line">node b[maxn],c[maxn];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">BIT</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> a[maxn];</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> ad)</span></span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(;x&lt;=n;x+=x&amp;(-x))&#123;</span><br><span class="line">			a[x]=max(ad,a[x]);</span><br><span class="line">		&#125; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">		<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(;x;x-=x&amp;(-x))&#123;</span><br><span class="line">			ans=max(a[x],ans);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> ans;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(;x&lt;=n;x+=x&amp;(-x))&#123;</span><br><span class="line">			a[x]=<span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; </span><br><span class="line">&#125;tb;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">cdq</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(l==r) <span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">int</span> mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">	cdq(l,mid);<span class="comment">//递归左边的 </span></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=l;i&lt;=r;i++) c[i]=b[i];<span class="comment">//更新右边 </span></span><br><span class="line">	sort(c+mid+<span class="number">1</span>,c+r+<span class="number">1</span>);</span><br><span class="line">	<span class="keyword">int</span> p=l,q=mid+<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(p&lt;=mid&amp;&amp;q&lt;=r)&#123;</span><br><span class="line">		<span class="keyword">if</span>(c[p].x&lt;c[q].x) tb.add(c[p].y,dp[c[p].id]),p++;</span><br><span class="line">		<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">int</span> ans=tb.query(c[q].y<span class="number">-1</span>);</span><br><span class="line">			dp[c[q].id]=max(dp[c[q].id],ans+<span class="number">1</span>);</span><br><span class="line">			q++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(q&lt;=r)&#123;</span><br><span class="line">		<span class="keyword">int</span> ans=tb.query(c[q].y<span class="number">-1</span>);</span><br><span class="line">		dp[c[q].id]=max(dp[c[q].id],ans+<span class="number">1</span>);</span><br><span class="line">		q++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=l;i&lt;=mid;i++) tb.clear(b[i].y);</span><br><span class="line">	cdq(mid+<span class="number">1</span>,r);<span class="comment">//递归右边 </span></span><br><span class="line">	sort(b+l,b+r+<span class="number">1</span>);<span class="comment">//结束后需要排序 </span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;t);</span><br><span class="line">	<span class="keyword">while</span>(t--)&#123;</span><br><span class="line">		v.clear();</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) dp[i]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;b[i].x);</span><br><span class="line">			b[i].id=i;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;b[i].y);</span><br><span class="line">			v.push_back(b[i].y);</span><br><span class="line">		&#125;</span><br><span class="line">		sort(v.begin(),v.end());</span><br><span class="line">		v.erase(unique(v.begin(),v.end()),v.end());</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) 		    b[i].y=lower_bound(v.begin(),v.end(),b[i].y)-v.begin()+<span class="number">1</span>;	</span><br><span class="line">		cdq(<span class="number">1</span>,n);</span><br><span class="line">		<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) ans=max(ans,dp[i]);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,ans);	</span><br><span class="line">	&#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></div></figure>
+
+        <h5 id="buaa-spring-training-3-c---boardroom-meeting-1"   >
+          <a href="#buaa-spring-training-3-c---boardroom-meeting-1" class="heading-link"><i class="fas fa-link"></i></a>BUAA spring training 3 C - Boardroom Meeting</h5>
+      
+<ul>
+<li>大致题意：有 <span class="math inline">\(n\)</span> 个长度为 <span class="math inline">\(k(k\le13)\)</span> 的 01串，现在有一个每一位都是未知状态的字符串，这个字符串是前面那 <span class="math inline">\(n\)</span> 个字符串其中之一，每问一位就可以知道一位的值，问对于任意的上面 <span class="math inline">\(n\)</span> 个字符串之一，最少问几次就能最终确定那个字符串。</li>
+<li>题解：考虑状压 dp，对于每一位令三个状态，0，1，2，“2” 表示这个位置是什么值是未知的，用三进制状态表示每个字符串，从前向后转移，<span class="math inline">\(dp[i]\)</span> 表示当前状态为 <span class="math inline">\(i\)</span> 最少还需多少步可以确定这个字符串。需处理出每一个长度为 k 的 3 进制串可能表示的字符串数量，这个可以用高维前缀和处理，之后从小向大枚举状态，对于每个数枚举那一位为 <span class="math inline">\(3\)</span> 的位置，考虑向那一位是 2 或者 1 转移，由于是对任意的 <span class="math inline">\(n\)</span> 个目标字符串成立，所以需要取向 <span class="math inline">\(2\)</span> 和 <span class="math inline">\(1\)</span> 转移两种情况的最大值。对于只包含一种目标字符串或者不包含任何目标字符串的状态，它的dp值是 0 ，可以直接跳过。</li>
+</ul>
+<figure class="highlight c++"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2e6</span>+<span class="number">13</span>;</span><br><span class="line"><span class="keyword">int</span> dp[maxn],vis[maxn],pw[maxn];</span><br><span class="line"><span class="keyword">char</span> s[<span class="number">15</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;t);</span><br><span class="line">	pw[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">13</span>;i++) pw[i]=pw[i<span class="number">-1</span>]*<span class="number">3</span>;</span><br><span class="line">	<span class="keyword">while</span>(t--)&#123;</span><br><span class="line">		<span class="keyword">int</span> n,k;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;n,&amp;k);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;pw[k];i++) vis[i]=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,s+<span class="number">1</span>);</span><br><span class="line">			<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=k;j++)&#123;</span><br><span class="line">				ans=ans*<span class="number">3</span>+s[j]-<span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			vis[ans]=<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;k;i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;pw[k];j++)&#123;</span><br><span class="line">				<span class="keyword">if</span>((j/pw[i])%<span class="number">3</span>==<span class="number">2</span>)&#123;</span><br><span class="line">					vis[j]+=vis[j-pw[i]];</span><br><span class="line">					vis[j]+=vis[j<span class="number">-2</span>*pw[i]];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;pw[k];i++) dp[i]=<span class="number">1e9</span>; </span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;pw[k];i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(vis[i]==<span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">			<span class="keyword">if</span>(vis[i]==<span class="number">1</span>)&#123;</span><br><span class="line">				dp[i]=<span class="number">0</span>;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;k;j++)&#123;</span><br><span class="line">				<span class="keyword">if</span>((i/pw[j])%<span class="number">3</span>==<span class="number">2</span>)&#123;</span><br><span class="line">					<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">					<span class="keyword">if</span>(vis[i-pw[j]]) ans=max(dp[i-pw[j]],ans);</span><br><span class="line">					<span class="keyword">if</span>(vis[i<span class="number">-2</span>*pw[j]]) ans=max(dp[i<span class="number">-2</span>*pw[j]],ans);</span><br><span class="line">					dp[i]=min(dp[i],ans+<span class="number">1</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,dp[pw[k]<span class="number">-1</span>]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://iuiou.github.io">iuiou</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://iuiou.github.io/2021/05/31/buaatraingup1/">http://iuiou.github.io/2021/05/31/buaatraingup1/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://iuiou.github.io/tags/team-training/">team training</a></span></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2021/04/28/Educational-Codeforces-Round-105-div2/"><span class="paginator-prev__text">Educational Codeforces Round 105 (div2)</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#buaa-training-up1"><span class="toc-number">1.</span> <span class="toc-text">
+          buaa training up1</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#ccpc-%E7%A7%A6%E7%9A%87%E5%B2%9B-h.holy-sequence"><span class="toc-number">1.1.</span> <span class="toc-text">
+          CCPC 秦皇岛 H.Holy Sequence</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#buaa-spring-training-3-c---boardroom-meeting"><span class="toc-number">1.2.</span> <span class="toc-text">
+          BUAA spring training 3 C - Boardroom Meeting</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#buaa-spring-training-3-c---boardroom-meeting-1"><span class="toc-number">1.3.</span> <span class="toc-text">
+          BUAA spring training 3 C - Boardroom Meeting</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">hello space</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/iuiou" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">26</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">8</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">8</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2021</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>iuiou</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zIndex="-1"></script><script>function initSearch() {
+  var isXML = true;
+  var search_path = 'search.json';
+
+  if (!search_path) {
+    search_path = 'search.xml';
+  } else if (/json$/i.test(search_path)) {
+    isXML = false;
+  }
+
+  var path = '/' + search_path;
+  $.ajax({
+    url: path,
+    dataType: isXML ? 'xml' : 'json',
+    async: true,
+    success: function (res) {
+      var datas = isXML ? $('entry', res).map(function () {
+        // 将 XML 转为 JSON
+        return {
+          title: $('title', this).text(),
+          content: $('content', this).text(),
+          url: $('url', this).text()
+        };
+      }).get() : res;
+      var $input = $('.search-input input');
+      var $result = $('.search-results');
+      // 搜索对象（标题、内容）的权重，影响显示顺序
+      var WEIGHT = { title: 100, content: 1 };
+      var searchPost = function () {
+        var searchText = $input.val().toLowerCase().trim();
+        // 根据空白字符分隔关键字
+        var keywords = searchText.split(/[\s]+/);
+        // 搜索结果
+        var matchPosts = [];
+
+        // 有多个关键字时，将原文字整个保存下来
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        // 防止未输入字符时搜索
+        if (searchText.length > 0) {
+          datas.forEach(function (data) {
+            var isMatch  = false;
+            // 没有标题的文章使用预设的 i18n 变量代替
+            var title = (data.title && data.title.trim()) || '[ 文章无标题 ]';
+            var titleLower = title && title.toLowerCase();
+            // 删除 HTML 标签 和 所有空白字符
+            var content = data.content && data.content.replace(/<[^>]+>/g, '');
+            var contentLower = content && content.toLowerCase();
+            // 删除重复的 /
+            var postURL = data.url && decodeURI(data.url).replace(/\/{2,}/g, '/');
+            // 标题中匹配到的关键词
+            var titleHitSlice = [];
+            // 内容中匹配到的关键词
+            var contentHitSlice = [];
+
+            keywords.forEach(function (keyword) {
+              /**
+              * 获取匹配的关键词的索引
+              * @param {String} keyword 要匹配的关键字
+              * @param {String} text 原文字
+              * @param {Boolean} caseSensitive 是否区分大小写
+              * @param {Number} weight 匹配对象的权重。权重大的优先显示
+              * @return {Array}
+              */
+              function getIndexByword (word, text, caseSensitive, weight) {
+                if (!word || !text) {
+                  return [];
+                };
+
+                var startIndex = 0; // 每次匹配的开始索引
+                var index = -1;     // 匹配到的索引值
+                var result = [];    // 匹配结果
+
+                if (!caseSensitive) {
+                  word = word.toLowerCase();
+                  text = text.toLowerCase();
+                }
+
+                while((index = text.indexOf(word, startIndex)) !== -1) {
+                  var hasMatch = false;
+                  // 索引位置相同的关键词，保留长度较长的
+                  titleHitSlice.forEach(function (hit) {
+                    if (hit.index === index && hit.word.length < word.length) {
+                      hit.word = word;
+                      hasMatch = true;
+                    }
+                  });
+                  startIndex = index + word.length;
+                  !hasMatch && result.push({ index: index, word: word, weight: weight });
+                }
+                return result;
+              }
+              titleHitSlice = titleHitSlice.concat(getIndexByword(keyword, titleLower, false, WEIGHT.title));
+              contentHitSlice = contentHitSlice.concat(getIndexByword(keyword, contentLower, false, WEIGHT.content));
+            });
+
+            var hitTitle = titleHitSlice.length;
+            var hitContent = contentHitSlice.length;
+
+            if (hitTitle > 0 || hitContent > 0) {
+              isMatch = true;
+            }
+            if (isMatch) {
+              ;[titleHitSlice, contentHitSlice].forEach(function (hit) {
+                // 按照匹配文字的索引的递增顺序排序
+                hit.sort(function (left, right) {
+                  return left.index - right.index;
+                });
+              });
+              /**
+              * 给文本中匹配到的关键词添加标记，从而进行高亮显示
+              * @param {String} text 原文本
+              * @param {Array} hitSlice 匹配项的索引信息
+              * @param {Number} start 开始索引
+              * @param {Number} end 结束索引
+              * @return {String}
+              */
+              function highlightKeyword (text, hitSlice, start, end) {
+                if (!text || !hitSlice || !hitSlice.length) {
+                  return;
+                }
+
+                var result = '';
+                var startIndex = start;
+                var endIndex = end;
+                hitSlice.forEach(function (hit) {
+                  if (hit.index < startIndex) {
+                    return;
+                  }
+
+                  var hitWordEnd = hit.index + hit.word.length;
+                  result += text.slice(startIndex, hit.index);
+                  result += '<b>' + text.slice(hit.index, hitWordEnd) + '</b>';
+                  startIndex = hitWordEnd;
+                });
+                result += text.slice(startIndex, endIndex);
+                return result;
+              }
+
+              var postData = {};
+              // 文章总的搜索权重
+              var postWeight = titleHitSlice.length * WEIGHT.title + contentHitSlice.length * WEIGHT.content;
+              // 标记匹配关键词后的标题
+              var postTitle = highlightKeyword(title, titleHitSlice, 0, title.length) || title;
+              // 标记匹配关键词后的内容
+              var postContent;
+              // 显示内容的长度
+              var SHOW_WORD_LENGTH = 200;
+              // 命中关键词前的字符显示长度
+              var SHOW_WORD_FRONT_LENGTH = 20;
+              var SHOW_WORD_END_LENGTH = SHOW_WORD_LENGTH - SHOW_WORD_FRONT_LENGTH;
+
+              // 截取匹配的第一个字符，前后共 200 个字符来显示
+              if (contentHitSlice.length > 0) {
+                var firstIndex = contentHitSlice[0].index;
+                var start = firstIndex > SHOW_WORD_FRONT_LENGTH ? firstIndex - SHOW_WORD_FRONT_LENGTH : 0;
+                var end = firstIndex + SHOW_WORD_END_LENGTH;
+                postContent = highlightKeyword(content, contentHitSlice, start, end);
+              } else { // 未匹配到内容，直接截取前 200 个字符来显示
+                postContent = content.slice(0, SHOW_WORD_LENGTH);
+              }
+              postData.title = postTitle;
+              postData.content = postContent;
+              postData.url = postURL;
+              postData.weight = postWeight;
+              matchPosts.push(postData);
+            }
+          });
+        }
+
+        var resultInnerHtml = '';
+        if (matchPosts.length) {
+          // 按权重递增的顺序排序，使权重大的优先显示
+          matchPosts.sort(function (left, right) {
+            return right.weight - left.weight;
+          });
+          resultInnerHtml += '<ul>';
+          matchPosts.forEach(function (post) {
+            resultInnerHtml += '<li><a class="search-results-title" href="' + post.url + '">';
+            resultInnerHtml += post.title;
+            resultInnerHtml += '</a><div class="search-results-content">';
+            resultInnerHtml += post.content;
+            resultInnerHtml += '</div></li>';
+          });
+          resultInnerHtml += '</ul>';
+        } else {
+          resultInnerHtml += '<div class="search-results-none"><i class="far fa-meh"></i></div>';
+        }
+        $result.html(resultInnerHtml);
+      };
+      $input.on('input', searchPost);
+      $input.on('keyup', function (e) {
+        if (e.keyCode === Stun.utils.codeToKeyCode('Enter')) {
+          searchPost();
+        }
+      });
+    }
+  });
+}
+
+function closeSearch () {
+  $('body').css({ overflow: 'auto' });
+  $('.search-popup').css({ display: 'none' });
+  $('.search-mask').css({ display: 'none' });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  Stun.utils.pjaxReloadLocalSearch = function () {
+    $('.header-nav-search').on('click', function (e) {
+      e.stopPropagation();
+      $('body').css('overflow', 'hidden');
+      $('.search-popup')
+        .velocity('stop')
+        .velocity('transition.expandIn', {
+          duration: 300,
+          complete: function () {
+            $('.search-popup input').focus();
+          }
+        });
+      $('.search-mask')
+        .velocity('stop')
+        .velocity('transition.fadeIn', {
+          duration: 300
+        });
+
+      initSearch();
+    });
+    $('.search-mask, .search-close').on('click', function () {
+      closeSearch();
+    });
+    $(document).on('keydown', function (e) {
+      // Escape <=> 27
+      if (e.keyCode === Stun.utils.codeToKeyCode('Escape')) {
+        closeSearch();
+      }
+    });
+  };
+
+  Stun.utils.pjaxReloadLocalSearch();
+}, false);
+
+function safeOpenUrl(url) {
+  var newTab = window.open();
+  newTab.opener = null;
+  newTab.location = url;
+}
+
+function extSearch(engine) {
+  var engines = {
+    google: 'https://www.google.com/search?q=',
+    bing: 'https://cn.bing.com/search?q=',
+    baidu: 'https://www.baidu.com/s?ie=UTF-8&wd=',
+  };
+  var host = window.location.host;
+  var query = $('.search-input input').val().toLowerCase().trim();
+  var uri = engines[engine] + query + ' site:' + host;
+
+  if (query) {
+    safeOpenUrl(uri);
+  } else {
+    Stun.utils.popAlert('warning', '请输入字符');
+  }
+}
+
+var assistSearchList = window.CONFIG.assistSearch;
+
+if (Array.isArray(assistSearchList)) {
+  assistSearchList.forEach(function (name) {
+    document.querySelector('.search-btns-item--' + name).addEventListener('click', function () {
+      extSearch(name);
+    }, false);
+  });
+}</script><script type="text/x-mathjax-config">var mathjaxMhchem = '';
+var mathJaxTex = {
+  equationNumbers: {
+    autoNumber: 'AMS'
+  }
+};
+
+if (false) {
+  mathjaxMhchem = 'https://cdn.jsdelivr.net/npm/mathjax-mhchem@3.3.2/mhchem.min.js';
+  MathJax.Ajax.config.path['mhchem'] = mathjaxMhchem;
+
+  mathJaxTex.extensions = [mathjaxMhchem];
+} else {
+  mathJaxTex.extensions = ['AMSmath.js','AMSsymbols.js'];
+}
+
+MathJax.Hub.Config({
+  menuSettings: {
+    zoom: 'None'
+  },
+  showMathMenu: false,
+  jax: ['input/TeX','output/CommonHTML'],
+  extensions: ['tex2jax.js'],
+  TeX: mathJaxTex,
+  tex2jax: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+
+MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+  MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+    if (data.display) {
+      var next = data.script.nextSibling;
+      while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling; }
+      if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next); }
+    }
+  });
+});
+
+MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i = 0; i < all.length; i++) {
+    document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/utils.js?v=2.6.1"></script><script src="/js/stun-boot.js?v=2.6.1"></script><script src="/js/scroll.js?v=2.6.1"></script><script src="/js/header.js?v=2.6.1"></script><script src="/js/sidebar.js?v=2.6.1"></script><script type="application/json" src="/search.json"></script></body></html>
