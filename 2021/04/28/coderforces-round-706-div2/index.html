@@ -33,48 +33,94 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">coderforces round 706(div2)</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2021-04-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2021-07-12</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">1.1k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">6分</span></span></div></header><div class="post-body">
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner header-inner--height header-inner--bgcolor"><nav class="header-nav header-nav--sticky"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-search"><span class="header-nav-search__icon"><i class="fas fa-search"></i></span><span class="header-nav-search__text">搜索</span></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">coderforces round 706(div2)</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2021-04-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2021-07-12</span></span><span class="post-meta-item post-meta-item--wordcount"><span class="post-meta-item__icon"><i class="far fa-file-word"></i></span><span class="post-meta-item__info">字数统计</span><span class="post-meta-item__value">1.1k</span></span><span class="post-meta-item post-meta-item--readtime"><span class="post-meta-item__icon"><i class="far fa-clock"></i></span><span class="post-meta-item__info">阅读时长</span><span class="post-meta-item__value">6分</span></span></div></header><div class="post-body">
         <h3 id="codeforces-round-706div2"   >
           <a href="#codeforces-round-706div2" class="heading-link"><i class="fas fa-link"></i></a>codeforces round 706（div2）</h3>
       
-<a id="more"></a>
+<span id="more"></span>
 
         <h4 id="a"   >
           <a href="#a" class="heading-link"><i class="fas fa-link"></i></a>A</h4>
       
 <ul>
-<li><p>大致题意：给定一个字符串 <span class="math inline">\(s\)</span>，和一个整数 <span class="math inline">\(k\)</span> ，问是否存在 <span class="math inline">\(k+1\)</span> 个字符串满足： <span class="math display">\[
+<li><p>大致题意：给定一个字符串 <span
+class="math inline">\(s\)</span>，和一个整数 <span
+class="math inline">\(k\)</span> ，问是否存在 <span
+class="math inline">\(k+1\)</span> 个字符串满足： <span
+class="math display">\[
 s=a_1+a_2+\ldots +a_k+a_{k+1}+R(a_k)+R(a_{k-1})+\ldots+R(a_{1})
-\]</span> 其中 <span class="math inline">\(k\)</span> 满足 <span class="math inline">\(k\le \lfloor{\frac{n}{2}}\rfloor\)</span> ，<span class="math inline">\(R(x)\)</span> 表示将 <span class="math inline">\(x\)</span> 反转后得到的字符串。</p></li>
-<li><p>题解：签到，<del>签了一个寂寞</del> ，不难发现，上面的构造字符串的形式，除中间的 <span class="math inline">\(a_{k+1}\)</span> 以外，其它的组成都是回文串的形式，所以贪心的想，求出前后缀满足回文串特性的最长形式，之后判断剩下不回文的片段是否大于<span class="math inline">\(0\)</span> 即可，ps：注意对于偶数的情况需要特判，即使整个串都是回文的也要为 <span class="math inline">\(a_{k+1}\)</span> 预留一个位置。</p></li>
+\]</span> 其中 <span class="math inline">\(k\)</span> 满足 <span
+class="math inline">\(k\le \lfloor{\frac{n}{2}}\rfloor\)</span> ，<span
+class="math inline">\(R(x)\)</span> 表示将 <span
+class="math inline">\(x\)</span> 反转后得到的字符串。</p></li>
+<li><p>题解：签到，<del>签了一个寂寞</del>
+，不难发现，上面的构造字符串的形式，除中间的 <span
+class="math inline">\(a_{k+1}\)</span>
+以外，其它的组成都是回文串的形式，所以贪心的想，求出前后缀满足回文串特性的最长形式，之后判断剩下不回文的片段是否大于<span
+class="math inline">\(0\)</span>
+即可，ps：注意对于偶数的情况需要特判，即使整个串都是回文的也要为 <span
+class="math inline">\(a_{k+1}\)</span> 预留一个位置。</p></li>
 </ul>
 
         <h4 id="b"   >
           <a href="#b" class="heading-link"><i class="fas fa-link"></i></a>B</h4>
       
 <ul>
-<li><p>大致题意：给定一个可重集合 <span class="math inline">\(S\)</span>，每次进行一次如下操作：</p>
+<li><p>大致题意：给定一个可重集合 <span
+class="math inline">\(S\)</span>，每次进行一次如下操作：</p>
 <ul>
-<li>将 <span class="math inline">\(\lceil\frac{\text{mex}(S)+\max(S)}{2}\rceil\)</span> 放入集合 <span class="math inline">\(S\)</span> 中。</li>
+<li>将 <span
+class="math inline">\(\lceil\frac{\text{mex}(S)+\max(S)}{2}\rceil\)</span>
+放入集合 <span class="math inline">\(S\)</span> 中。</li>
 </ul>
-<p>问进行 <span class="math inline">\(k\)</span> 次操作后会剩下多少个元素。</p></li>
-<li><p>题解：思维题，可以分两种情况来考虑，先考虑一个普遍的情况，如果 <span class="math inline">\(\text{mex}(S)\le\max(S)\)</span> ，则，易知每次进行如上操作不会改变 <span class="math inline">\(\max(S)\)</span> 和 <span class="math inline">\(\text{mex}(S)\)</span> ，所以无论多少次操作都至多新增一个数。一种特殊情况，<span class="math inline">\(\text{mex}(S)&gt;\max(S)\)</span> ，即集合中的数是 <span class="math inline">\(0,1,2,……，n\)</span> 这样的形式，上述操作每次会新增一个最大值，且将最大值加一，所以答案就是集合数量加上 <span class="math inline">\(k\)</span> 。</p></li>
+<p>问进行 <span class="math inline">\(k\)</span>
+次操作后会剩下多少个元素。</p></li>
+<li><p>题解：思维题，可以分两种情况来考虑，先考虑一个普遍的情况，如果
+<span class="math inline">\(\text{mex}(S)\le\max(S)\)</span>
+，则，易知每次进行如上操作不会改变 <span
+class="math inline">\(\max(S)\)</span> 和 <span
+class="math inline">\(\text{mex}(S)\)</span>
+，所以无论多少次操作都至多新增一个数。一种特殊情况，<span
+class="math inline">\(\text{mex}(S)&gt;\max(S)\)</span> ，即集合中的数是
+<span class="math inline">\(0,1,2,……，n\)</span>
+这样的形式，上述操作每次会新增一个最大值，且将最大值加一，所以答案就是集合数量加上
+<span class="math inline">\(k\)</span> 。</p></li>
 </ul>
 
         <h4 id="c"   >
           <a href="#c" class="heading-link"><i class="fas fa-link"></i></a>C</h4>
       
 <ul>
-<li>大致题意：给定一个二维坐标系，规定 <span class="math inline">\(n\)</span> 个黄金矿工都在 <span class="math inline">\(y\)</span> 轴上，<span class="math inline">\(n\)</span> 个金矿都在 <span class="math inline">\(x\)</span> 轴上，每个矿工都只能挖一个金矿，需要花费 <span class="math inline">\(dis(x,y)\)</span> 的代价，问怎么安排才能使得挖完所有金矿的总代价最低？</li>
-<li>题解：几何题，将 <span class="math inline">\(x，y\)</span> 轴上的所有点按绝对值分别排序，一一对应求距离相加即可。为啥这样最优呢，其实基于一个初中就证明过的平面几何性质：梯形对角线之和大于上下两条底边之和。所以每次取相对平行的边一定是最优的。</li>
+<li>大致题意：给定一个二维坐标系，规定 <span
+class="math inline">\(n\)</span> 个黄金矿工都在 <span
+class="math inline">\(y\)</span> 轴上，<span
+class="math inline">\(n\)</span> 个金矿都在 <span
+class="math inline">\(x\)</span>
+轴上，每个矿工都只能挖一个金矿，需要花费 <span
+class="math inline">\(dis(x,y)\)</span>
+的代价，问怎么安排才能使得挖完所有金矿的总代价最低？</li>
+<li>题解：几何题，将 <span class="math inline">\(x，y\)</span>
+轴上的所有点按绝对值分别排序，一一对应求距离相加即可。为啥这样最优呢，其实基于一个初中就证明过的平面几何性质：梯形对角线之和大于上下两条底边之和。所以每次取相对平行的边一定是最优的。</li>
 </ul>
 
         <h4 id="d"   >
           <a href="#d" class="heading-link"><i class="fas fa-link"></i></a>D</h4>
       
 <ul>
-<li>大致题意：给定一个排列 <span class="math inline">\(p\)</span> ，两人做博弈，一开始两个人选择 <span class="math inline">\(p\)</span> 中的一个位置，A 先选，B 后选，选择完成后，A 可以向左边或者右边移动一格，规定移动到的位置 <span class="math inline">\(x\)</span> 相对与原来的位置 <span class="math inline">\(x_0\)</span> 必须满足 <span class="math inline">\(p_{x_0}&lt;p_x\)</span> ，对于B来说，每次移动的位置 <span class="math inline">\(y\)</span> 相对原来的位置 <span class="math inline">\(y_0\)</span> 必须满足 <span class="math inline">\(p_{y_0}&gt;p_y\)</span> ，两人不能位于同一点，最先不能走的人失败。问有多少个点是必胜点。</li>
-<li>题解： 博弈论思维题，首先显然任何排列都可以写成许多波峰的拼接，A 每次会向下走，B 每次会向上走。首先，对于先手来说一定要选择在最高的一个峰顶，否则，后手可以选择从最高峰的最底段开始往上走，这样一定会比先手走的步数多。
+<li>大致题意：给定一个排列 <span class="math inline">\(p\)</span>
+，两人做博弈，一开始两个人选择 <span class="math inline">\(p\)</span>
+中的一个位置，A 先选，B 后选，选择完成后，A
+可以向左边或者右边移动一格，规定移动到的位置 <span
+class="math inline">\(x\)</span> 相对与原来的位置 <span
+class="math inline">\(x_0\)</span> 必须满足 <span
+class="math inline">\(p_{x_0}&lt;p_x\)</span>
+，对于B来说，每次移动的位置 <span class="math inline">\(y\)</span>
+相对原来的位置 <span class="math inline">\(y_0\)</span> 必须满足 <span
+class="math inline">\(p_{y_0}&gt;p_y\)</span>
+，两人不能位于同一点，最先不能走的人失败。问有多少个点是必胜点。</li>
+<li>题解： 博弈论思维题，首先显然任何排列都可以写成许多波峰的拼接，A
+每次会向下走，B
+每次会向上走。首先，对于先手来说一定要选择在最高的一个峰顶，否则，后手可以选择从最高峰的最底段开始往上走，这样一定会比先手走的步数多。
 <ul>
 <li>情况1：最高峰高度为奇数，则后手可以赌先手，先手必输</li>
 <li>情况2：最高峰高度为偶数，而且对于最高的峰顶，如果最高的峰顶有两个以上，那么先手还是必输，因为先手和后手都会选择一个最高的峰，但是因为先手先走，所以先手会先走不了（这时后手还剩下一步可以走）</li>
@@ -87,7 +133,7 @@ s=a_1+a_2+\ldots +a_k+a_{k+1}+R(a_k)+R(a_{k-1})+\ldots+R(a_{1})
           A</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#b"><span class="toc-number">1.2.</span> <span class="toc-text">
           B</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#c"><span class="toc-number">1.3.</span> <span class="toc-text">
           C</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#d"><span class="toc-number">1.4.</span> <span class="toc-text">
-          D</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">hello space</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/iuiou" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">26</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">6</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">8</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>iuiou</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.3.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zIndex="-1"></script><script>function initSearch() {
+          D</span></a></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">hello space</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/iuiou" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">25</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">7</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>iuiou</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v5.4.2</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><div class="search-mask"></div><div class="search-popup"><span class="search-close"></span><div class="search-input"><input placeholder="搜索文章（支持多关键词，请用空格分隔）"></div><div class="search-results"></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/ribbon.js@latest/dist/ribbon.min.js" size="120" alpha="0.6" zIndex="-1"></script><script>function initSearch() {
   var isXML = true;
   var search_path = 'search.json';
 
